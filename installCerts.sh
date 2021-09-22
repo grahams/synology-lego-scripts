@@ -24,5 +24,7 @@ cat "${LEGO_FOLDER}"/"${LE_DOMAIN}".crt "${LEGO_FOLDER}"/"${LE_DOMAIN}".issuer.c
 cp "${LEGO_FOLDER}"/"${LE_DOMAIN}".key "${SYNOLOGY_FOLDER}"/privkey.pem
 
 # Restart the Synology nginx server
-/usr/syno/etc/rc.sysv/nginx.sh reload
+#/usr/syno/etc/rc.sysv/nginx.sh reload
+systemctl reload nginx
+
 
